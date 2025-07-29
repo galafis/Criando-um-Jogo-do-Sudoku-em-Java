@@ -73,3 +73,23 @@ Desenvolvido por um estudante apaixonado por lógica, aprendizado prático e sol
 ---
 
 Se você curtiu esse projeto, ⭐ marque o repositório, contribua com melhorias ou adapte essa lógica para outras aplicações de terminal. Bons estudos e bom jogo! 🧩
+
+
+## 📋 Descrição
+
+Descreva aqui o conteúdo desta seção.
+
+
+## 📦 Instalação
+
+Descreva aqui o conteúdo desta seção.
+
+
+## 💻 Uso
+
+Descreva aqui o conteúdo desta seção.
+
+
+## 📄 Licença
+
+Descreva aqui o conteúdo desta seção.
