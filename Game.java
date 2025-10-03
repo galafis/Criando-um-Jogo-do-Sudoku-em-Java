@@ -10,8 +10,8 @@ public class Game {
             String[] coords = parts[0].split(",");
             int x = Integer.parseInt(coords[0]);
             int y = Integer.parseInt(coords[1]);
-            int value = Integer.parseInt(parts[1]);
-            boolean fixed = Boolean.parseBoolean(parts[2]);
+            int value = Integer.parseInt(parts[1].split(",")[0]);
+            boolean fixed = Boolean.parseBoolean(parts[1].split(",")[1]);
             board.setCell(x, y, value, fixed);
         }
     }
