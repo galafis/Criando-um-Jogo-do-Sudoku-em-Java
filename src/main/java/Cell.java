@@ -25,3 +25,4 @@ public class Cell {
         return value == 0 ? "." : Integer.toString(value);
     }
 }
+

@@ -4,6 +4,7 @@
 ![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Java Version](https://img.shields.io/badge/Java-11-orange?style=for-the-badge&logo=openjdk&logoColor=white)
 
 Bem-vindo ao repositório do **Sudoku no Terminal**, um projeto desenvolvido com Java puro e executado diretamente pelo terminal. Aqui, aplicamos na prática conceitos de Programação Orientada a Objetos (POO), manipulação de arrays bidimensionais, lógica de validação e interatividade com o usuário — tudo isso em um jogo clássico que desafia o raciocínio lógico!
 
@@ -31,24 +32,37 @@ In addition to reinforcing logic, this project also helps you to:
 
 ## 🚀 Como Executar / How to Run
 
-### 1. Compilar o projeto / Compile the project
+### Pré-requisitos / Prerequisites
+
+Certifique-se de ter o Java Development Kit (JDK) 11 ou superior e o Apache Maven instalados em sua máquina.
+
+Ensure you have Java Development Kit (JDK) 11 or higher and Apache Maven installed on your machine.
+
+### 1. Clonar o repositório / Clone the repository
+
+```bash
+git clone https://github.com/galafis/Criando-um-Jogo-do-Sudoku-em-Java.git
+cd Criando-um-Jogo-do-Sudoku-em-Java
+```
+
+### 2. Compilar o projeto / Compile the project
 
 Abra o terminal na raiz do projeto e execute:
 
 Open the terminal in the project root and execute:
 
 ```bash
-javac Criando-um-Jogo-do-Sudoku-em-Java/*.java
+mvn clean install
 ```
 
-### 2. Rodar o jogo com o tabuleiro inicial / Run the game with an initial board
+### 3. Rodar o jogo com o tabuleiro inicial / Run the game with an initial board
 
 O jogo aceita argumentos no formato `"x,y;valor,fixed"`, onde `fixed` define se a célula é imutável:
 
 The game accepts arguments in the format `"x,y;value,fixed"`, where `fixed` defines if the cell is immutable:
 
 ```bash
-java -cp Criando-um-Jogo-do-Sudoku-em-Java Main "0,0;4,false" "1,0;7,false" "2,0;9,true"
+java -jar target/criando-um-jogo-do-sudoku-em-java-1.0.0.jar "0,0;4,false" "1,0;7,false" "2,0;9,true"
 ```
 
 Você pode usar o argumento completo fornecido no desafio da DIO para testar com um tabuleiro realista.
@@ -83,11 +97,14 @@ Fixed (pre-filled) cells cannot be changed.
 ```
 Criando-um-Jogo-do-Sudoku-em-Java/
 ├── src/
-│   ├── Cell.java         # Representa cada célula do tabuleiro / Represents each cell of the board
-│   ├── SudokuBoard.java  # Estrutura e lógica do tabuleiro / Board structure and logic
-│   ├── Game.java         # Motor do jogo: leitura e lógica interativa / Game engine: input and interactive logic
-│   └── Main.java         # Classe principal que inicializa o jogo / Main class that initializes the game
+│   └── main/
+│       └── java/
+│           ├── Cell.java         # Representa cada célula do tabuleiro / Represents each cell of the board
+│           ├── SudokuBoard.java  # Estrutura e lógica do tabuleiro / Board structure and logic
+│           ├── Game.java         # Motor do jogo: leitura e lógica interativa / Game engine: input and interactive logic
+│           └── Main.java         # Classe principal que inicializa o jogo / Main class that initializes the game
 ├── pom.xml               # Gerenciamento de dependências Maven / Maven dependency management
+├── LICENSE               # Licença do projeto / Project License
 └── README.md             # Documentação do projeto / Project documentation
 ```
 
@@ -112,12 +129,6 @@ Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](L
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-
-
-## 🖼️ Imagem Hero / Hero Image
-
-![Sudoku Hero Image](sudoku_hero.png)
-
 ## 🏗️ Diagrama de Arquitetura / Architecture Diagram
 
 ```mermaid
@@ -129,4 +140,17 @@ graph TD
 ```
 
 ![Architecture Diagram](architecture_diagram.png)
+
+
+## 🤝 Como Contribuir / How to Contribute
+
+Contribuições são bem-vindas! Se você tiver sugestões de melhorias, novas funcionalidades ou encontrar algum bug, sinta-se à vontade para abrir uma issue ou enviar um pull request. Por favor, siga as diretrizes de código e garanta que seus commits sejam claros e descritivos.
+
+Contributions are welcome! If you have suggestions for improvements, new features, or find any bugs, feel free to open an issue or submit a pull request. Please follow the code guidelines and ensure your commits are clear and descriptive.
+
+## 🧪 Testes Unitários / Unit Tests
+
+Atualmente, este projeto não possui testes unitários implementados. A adição de testes unitários é uma melhoria planejada para garantir a robustez e a correção do código em futuras iterações.
+
+Currently, this project does not have unit tests implemented. The addition of unit tests is a planned improvement to ensure code robustness and correctness in future iterations.
 

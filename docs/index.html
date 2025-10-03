@@ -42,13 +42,13 @@
 </head>
 <body>
     <div class="container">
-        <img src="../sudoku_hero.png" alt="Sudoku Hero Image" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 20px;">
         <h1>🧩 Sudoku no Terminal com Java</h1>
         <p>
             <img class="badge" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java Badge">
             <img class="badge" src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white" alt="Maven Badge">
             <img class="badge" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge">
             <img class="badge" src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License Badge">
+            <img class="badge" src="https://img.shields.io/badge/Java-11-orange?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java Version Badge">
         </p>
         <p>Bem-vindo ao repositório do <strong>Sudoku no Terminal</strong>, um projeto desenvolvido com Java puro e executado diretamente pelo terminal. Aqui, aplicamos na prática conceitos de Programação Orientada a Objetos (POO), manipulação de arrays bidimensionais, lógica de validação e interatividade com o usuário — tudo isso em um jogo clássico que desafia o raciocínio lógico!</p>
         <p>Welcome to the <strong>Sudoku in Terminal</strong> repository, a project developed with pure Java and executed directly from the terminal. Here, we apply Object-Oriented Programming (OOP) concepts, two-dimensional array manipulation, validation logic, and user interactivity — all in a classic game that challenges logical reasoning!</p>
@@ -72,15 +72,23 @@
         </ul>
 
         <h2>🚀 Como Executar / How to Run</h2>
-        <h3>1. Compilar o projeto / Compile the project</h3>
+        <h3>Pré-requisitos / Prerequisites</h3>
+        <p>Certifique-se de ter o Java Development Kit (JDK) 11 ou superior e o Apache Maven instalados em sua máquina.</p>
+        <p>Ensure you have Java Development Kit (JDK) 11 or higher and Apache Maven installed on your machine.</p>
+
+        <h3>1. Clonar o repositório / Clone the repository</h3>
+        <pre><code>git clone https://github.com/galafis/Criando-um-Jogo-do-Sudoku-em-Java.git
+cd Criando-um-Jogo-do-Sudoku-em-Java</code></pre>
+
+        <h3>2. Compilar o projeto / Compile the project</h3>
         <p>Abra o terminal na raiz do projeto e execute:</p>
         <p>Open the terminal in the project root and execute:</p>
-        <pre><code>javac Criando-um-Jogo-do-Sudoku-em-Java/*.java</code></pre>
+        <pre><code>mvn clean install</code></pre>
 
-        <h3>2. Rodar o jogo com o tabuleiro inicial / Run the game with an initial board</h3>
+        <h3>3. Rodar o jogo com o tabuleiro inicial / Run the game with an initial board</h3>
         <p>O jogo aceita argumentos no formato <code>"x,y;valor,fixed"</code>, onde <code>fixed</code> define se a célula é imutável:</p>
         <p>The game accepts arguments in the format <code>"x,y;value,fixed"</code>, where <code>fixed</code> defines if the cell is immutable:</p>
-        <pre><code>java -cp Criando-um-Jogo-do-Sudoku-em-Java Main "0,0;4,false" "1,0;7,false" "2,0;9,true"</code></pre>
+        <pre><code>java -jar target/criando-um-jogo-do-sudoku-em-java-1.0.0.jar "0,0;4,false" "1,0;7,false" "2,0;9,true"</code></pre>
         <p>Você pode usar o argumento completo fornecido no desafio da DIO para testar com um tabuleiro realista.</p>
         <p>You can use the full argument provided in the DIO challenge to test with a realistic board.</p>
 
@@ -112,11 +120,14 @@
         <pre><code>
 Criando-um-Jogo-do-Sudoku-em-Java/
 ├── src/
-│   ├── Cell.java         # Representa cada célula do tabuleiro / Represents each cell of the board
-│   ├── SudokuBoard.java  # Estrutura e lógica do tabuleiro / Board structure and logic
-│   ├── Game.java         # Motor do jogo: leitura e lógica interativa / Game engine: input and interactive logic
-│   └── Main.java         # Classe principal que inicializa o jogo / Main class that initializes the game
+│   └── main/
+│       └── java/
+│           ├── Cell.java         # Representa cada célula do tabuleiro / Represents each cell of the board
+│           ├── SudokuBoard.java  # Estrutura e lógica do tabuleiro / Board structure and logic
+│           ├── Game.java         # Motor do jogo: leitura e lógica interativa / Game engine: input and interactive logic
+│           └── Main.java         # Classe principal que inicializa o jogo / Main class that initializes the game
 ├── pom.xml               # Gerenciamento de dependências Maven / Maven dependency management
+├── LICENSE               # Licença do projeto / Project License
 └── README.md             # Documentação do projeto / Project documentation
         </code></pre>
 
