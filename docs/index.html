@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku no Terminal com Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+        }
+        .badge {
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../sudoku_hero.png" alt="Sudoku Hero Image" style="width:100%; height:auto; border-radius: 8px; margin-bottom: 20px;">
+        <h1>🧩 Sudoku no Terminal com Java</h1>
+        <p>
+            <img class="badge" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java Badge">
+            <img class="badge" src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white" alt="Maven Badge">
+            <img class="badge" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge">
+            <img class="badge" src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License Badge">
+        </p>
+        <p>Bem-vindo ao repositório do <strong>Sudoku no Terminal</strong>, um projeto desenvolvido com Java puro e executado diretamente pelo terminal. Aqui, aplicamos na prática conceitos de Programação Orientada a Objetos (POO), manipulação de arrays bidimensionais, lógica de validação e interatividade com o usuário — tudo isso em um jogo clássico que desafia o raciocínio lógico!</p>
+        <p>Welcome to the <strong>Sudoku in Terminal</strong> repository, a project developed with pure Java and executed directly from the terminal. Here, we apply Object-Oriented Programming (OOP) concepts, two-dimensional array manipulation, validation logic, and user interactivity — all in a classic game that challenges logical reasoning!</p>
+
+        <h2>✨ Sobre o Projeto / About the Project</h2>
+        <p>Este jogo simula um tabuleiro de Sudoku no terminal, com suporte a células fixas e preenchimento pelo usuário. Você pode iniciar o jogo com um conjunto de valores já definidos e, a partir disso, interagir em tempo real, preenchendo os espaços vazios com seus palpites.</p>
+        <p>This game simulates a Sudoku board in the terminal, supporting fixed cells and user input. You can start the game with a predefined set of values and then interact in real-time, filling in empty spaces with your guesses.</p>
+        <p>Além de reforçar a lógica, este projeto também te ajuda a:</p>
+        <ul>
+            <li>Trabalhar com argumentos passados via linha de comando;</li>
+            <li>Compreender encapsulamento e abstração com classes e métodos;</li>
+            <li>Praticar o controle de fluxo e entrada de dados no terminal;</li>
+            <li>Usar boas práticas de estruturação de código em Java.</li>
+        </ul>
+        <p>In addition to reinforcing logic, this project also helps you to:</p>
+        <ul>
+            <li>Work with command-line arguments;</li>
+            <li>Understand encapsulation and abstraction with classes and methods;</li>
+            <li>Practice flow control and data input in the terminal;</li>
+            <li>Use good practices for structuring Java code.</li>
+        </ul>
+
+        <h2>🚀 Como Executar / How to Run</h2>
+        <h3>1. Compilar o projeto / Compile the project</h3>
+        <p>Abra o terminal na raiz do projeto e execute:</p>
+        <p>Open the terminal in the project root and execute:</p>
+        <pre><code>javac Criando-um-Jogo-do-Sudoku-em-Java/*.java</code></pre>
+
+        <h3>2. Rodar o jogo com o tabuleiro inicial / Run the game with an initial board</h3>
+        <p>O jogo aceita argumentos no formato <code>"x,y;valor,fixed"</code>, onde <code>fixed</code> define se a célula é imutável:</p>
+        <p>The game accepts arguments in the format <code>"x,y;value,fixed"</code>, where <code>fixed</code> defines if the cell is immutable:</p>
+        <pre><code>java -cp Criando-um-Jogo-do-Sudoku-em-Java Main "0,0;4,false" "1,0;7,false" "2,0;9,true"</code></pre>
+        <p>Você pode usar o argumento completo fornecido no desafio da DIO para testar com um tabuleiro realista.</p>
+        <p>You can use the full argument provided in the DIO challenge to test with a realistic board.</p>
+
+        <h2>🎮 Como Jogar / How to Play</h2>
+        <ul>
+            <li>O jogo exibe o tabuleiro no terminal.</li>
+            <li>Digite as coordenadas <code>x y</code> e o valor desejado quando solicitado.</li>
+            <li>Exemplo: <code>3 1 5</code> (preenche a célula da coluna 3, linha 1 com o número 5).</li>
+            <li>Para encerrar o jogo, digite <code>-1</code> no campo <code>x</code>.</li>
+        </ul>
+        <p>Células fixas (pré-preenchidas) não podem ser alteradas.</p>
+        <ul>
+            <li>The game displays the board in the terminal.</li>
+            <li>Enter the coordinates <code>x y</code> and the desired value when prompted.</li>
+            <li>Example: <code>3 1 5</code> (fills the cell at column 3, row 1 with the number 5).</li>
+            <li>To exit the game, type <code>-1</code> in the <code>x</code> field.</li>
+        </ul>
+        <p>Fixed (pre-filled) cells cannot be changed.</p>
+
+        <h2>🧠 Funcionalidades / Features</h2>
+        <ul>
+            <li>✅ Inserção de números com verificação de células fixas / Number insertion with fixed cell verification</li>
+            <li>✅ Exibição clara do tabuleiro no terminal, com divisões de blocos 3x3 / Clear board display in the terminal, with 3x3 block divisions</li>
+            <li>✅ Interatividade via terminal / Terminal interactivity</li>
+            <li>🔜 Validação automática da solução (em desenvolvimento) / Automatic solution validation (under development)</li>
+        </ul>
+
+        <h2>📁 Estrutura do Projeto / Project Structure</h2>
+        <pre><code>
+Criando-um-Jogo-do-Sudoku-em-Java/
+├── src/
+│   ├── Cell.java         # Representa cada célula do tabuleiro / Represents each cell of the board
+│   ├── SudokuBoard.java  # Estrutura e lógica do tabuleiro / Board structure and logic
+│   ├── Game.java         # Motor do jogo: leitura e lógica interativa / Game engine: input and interactive logic
+│   └── Main.java         # Classe principal que inicializa o jogo / Main class that initializes the game
+├── pom.xml               # Gerenciamento de dependências Maven / Maven dependency management
+└── README.md             # Documentação do projeto / Project documentation
+        </code></pre>
+
+        <h2>💡 Inspiração / Inspiration</h2>
+        <p>Este projeto foi desenvolvido como parte dos desafios propostos pela <a href="https://web.dio.me">Digital Innovation One (DIO)</a>, com base no repositório oficial:</p>
+        <p>This project was developed as part of the challenges proposed by <a href="https://web.dio.me">Digital Innovation One (DIO)</a>, based on the official repository:</p>
+        <ul>
+            <li><a href="https://github.com/digitalinnovationone/sudoku">Versão terminal - Branch main</a></li>
+            <li><a href="https://github.com/digitalinnovationone/sudoku/tree/ui">Versão com interface gráfica - Branch ui</a></li>
+        </ul>
+
+        <h2>🧑‍💻 Autor / Author</h2>
+        <p>Desenvolvido por Gabriel Demetrios Lafis, um estudante apaixonado por lógica, aprendizado prático e soluções criativas em Java 🚀</p>
+        <p>Developed by Gabriel Demetrios Lafis, a student passionate about logic, practical learning, and creative solutions in Java 🚀</p>
+
+        <h2>📄 Licença / License</h2>
+        <p>Este projeto está licenciado sob a Licença MIT. Consulte o arquivo <a href="../LICENSE">LICENSE</a> para mais detalhes.</p>
+        <p>This project is licensed under the MIT License. See the <a href="../LICENSE">LICENSE</a> file for more details.</p>
+
+        <img src="../architecture_diagram.png" alt="Architecture Diagram" style="width:100%; height:auto; border-radius: 8px; margin-top: 20px;">
+    </div>
+</body>
+</html>
